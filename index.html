@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Train Scheduler</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container">
+		<div class="jumbotron bg-dark text-white">
+			<h1>Train Scheduler</h1>
+			<h4>All Aboard</h4>
+		</div>
+
+		<div class="card mb-4">
+			<div class="card-header bg-dark text-white">
+				Current Train Schedule
+			</div>
+			<div class="card-body">
+				<table class="table table-hover">
+					<thead class="bg-info text-white">
+						<tr>
+							<th scope="col">Train Name</th>
+							<th scope="col">Destination</th>
+							<th scope="col">Frequency (min)</th>
+							<th scope="col">Next Arrival</th>
+							<th scope="col">Minutes Away</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="card mb-4">
+			<div class="card-header bg-dark text-white">
+				Add Train
+			</div>
+			<div class="card-body">
+				<form>
+					<div class="form-group">
+						<label for="train-name">Train Name</label>
+						<input type="text" class="form-control" id="train-name">
+					</div>
+					<div class="form-group">
+						<label for="destination">Destination</label>
+						<input type="text" class="form-control" id="destination">
+					</div>
+					<div class="form-group">
+						<label for="first-train-time">First Train Time(hh:mm AM/PM)</label>
+						<input type="time" class="form-control" id="first-train-time">
+					</div>
+					<div class="form-group">
+						<label for="frequency">Frequency (min)</label>
+						<input type="number" class="form-control" id="frequency">
+					</div>
+					<button type="submit" class="btn btn-info" id="submit">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script src="moment.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
